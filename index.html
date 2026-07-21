@@ -226,17 +226,23 @@
         // =========================================================================
         // CONFIGURA TU PROYECTO DE FIREBASE AQUÍ PARA USAR EN PRODUCCIÓN
         // =========================================================================
-        const firebaseConfig = {
-            apiKey: "TU_API_KEY",
-            authDomain: "TU_PROYECTO.firebaseapp.com",
-            projectId: "TU_PROYECTO",
-            storageBucket: "TU_PROYECTO.appspot.com",
-            messagingSenderId: "TU_SENDER_ID",
-            appId: "TU_APP_ID"
-        };
-        // =========================================================================
+       // Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyAspJzx2DzCqt02HW8UsEkA7RiBT6cJdp4",
+  authDomain: "soporte-alcaldia.firebaseapp.com",
+  projectId: "soporte-alcaldia",
+  storageBucket: "soporte-alcaldia.firebasestorage.app",
+  messagingSenderId: "782451894356",
+  appId: "1:782451894356:web:65b70d8f7eedf1991925c1"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
         import { getFirestore, collection, addDoc, onSnapshot, updateDoc, doc, query, orderBy } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
         // Determinar si Firebase está configurado (si tiene las claves por defecto o reales)
